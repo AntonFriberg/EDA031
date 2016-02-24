@@ -4,8 +4,8 @@
  */
 #include "nameserverinterface.h"
 #include "vns.h"
-//#include "mns.h"
-//#include "umns.h"
+#include "mns.h"
+#include "umns.h"
 //#include "hns.h"
 #include <iostream>
 #include <fstream>
@@ -85,8 +85,8 @@ int main() {
 	/*
 	 * The map implementations.
 	 */
-	//MNS mns;
-	//UMNS umns;
+	MNS mns;
+	UMNS umns;
 
 	/*
 	 * The hash table implementation. The size of the hash table is
@@ -116,8 +116,8 @@ int main() {
 	while (in >> name >> nbr) {
 		data.push_back(dns_record(name, nbr));
 		vns.insert(name, nbr);
-		//mns.insert(name, nbr);
-		//umns.insert(name, nbr);
+		mns.insert(name, nbr);
+		umns.insert(name, nbr);
 		//hns.insert(name, nbr);
 	}
 	cout << " read " << data.size() << " words." << endl;
@@ -145,13 +145,13 @@ int main() {
 
 	cout << "Test map. Number of searches: ";
 	cin >> nbrSearches;
-	//avgTime = measureTime(mns, data, nbrSearches, seed);
-	//cout << "Average search time (ms): " << avgTime << endl;
+	avgTime = measureTime(mns, data, nbrSearches, seed);
+	cout << "Average search time (ms): " << avgTime << endl;
 
 	cout << "Test unordered map. Number of searches: ";
 	cin >> nbrSearches;
-	//avgTime = measureTime(umns, data, nbrSearches, seed);
-	//cout << "Average search time (ms): " << avgTime << endl;
+	avgTime = measureTime(umns, data, nbrSearches, seed);
+	cout << "Average search time (ms): " << avgTime << endl;
 
 	cout << "Test hash. Number of searches: ";
 	cin >> nbrSearches;

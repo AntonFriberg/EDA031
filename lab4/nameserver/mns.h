@@ -1,22 +1,22 @@
 /*
-Implement a class VNS (vector name server) that uses an unsorted vector to store the
-name/address pairs. Use the find if algorithm to search for a host name. The third
-parameter to the algorithm should be a lambda.
+Implement a class MNS (map name server) that uses a map to store the name/address
+pairs. The average search time in this implementation will be considerably better than
+that for the vector implementation.
 */
-#ifndef VNS_H
-#define VNS_H
+#ifndef MNS_H
+#define MNS_H
 
 #include <string>
-#include <vector>
+#include <map>
 #include "nameserverinterface.h"
 
 using HostName = std::string;
 using IPAddress = unsigned int;
 
-class VNS : public NameServerInterface {
+class MNS : public NameServerInterface {
 public:
-  VNS();
-	~VNS();
+  MNS();
+	~MNS();
 
 	/*
 	 * Insert a name/address pair. Does not check if the name
@@ -37,8 +37,9 @@ public:
 	 * server.
 	 */
 	IPAddress lookup(const HostName&) const;
+
 private:
-  std::vector<std::pair<HostName, IPAddress>> v; //Vector of pairs
+  std::map<HostName, IPAddress> m;
 };
 
 #endif

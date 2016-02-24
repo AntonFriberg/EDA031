@@ -23,11 +23,11 @@ all: $(PROGS)
 
 # Targets rely on implicit rules for compiling and linking
 vns: vns.o
-#mns: mns.o
-#umns: umns.o
-#hns: hns.o
-nstest: nstest.o vns.o #mns.o umns.o hns.o
-nstime: nstime.o vns.o #mns.o umns.o hns.o
+mns: mns.o
+umns: umns.o
+hns: hns.o
+nstest: nstest.o vns.o mns.o umns.o hns.o
+nstime: nstime.o vns.o mns.o umns.o hns.o
 
 
 # Phony targets

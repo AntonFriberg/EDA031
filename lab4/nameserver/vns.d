@@ -1,1 +1,1 @@
-vns.o vns.d : vns.cc vns.h nameserverinterface.h
+vns.o vns.d : vns.cc nameserverinterface.h
