@@ -1,0 +1,12 @@
+a's 1 a's 
+aa's 2 a's aa' 
+ab's 2 ab' b's 
+abm's 3 abm bm' m's 
+ac's 2 ac' c's 
+acth's 4 act cth h's th' 
+ai's 2 ai' i's 
+aids's 4 aid ds' ids s's 
+am's 2 am' m's 
+aol 1 aol 
+aol's 3 aol l's ol' 
+asci

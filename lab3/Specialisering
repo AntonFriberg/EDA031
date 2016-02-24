@@ -1,0 +1,11 @@
+4.5 HP - OMDz
+7.5 HP - Funktionsprogrammering
+7.5 HP - Konfigurationshantering
+7.5 HP - Databasteknik
+5.0 HP - Algoritmer, datastrukturer och komplexitet.
+----------
+
+
+"(\<[^\>]*\>)
+|\<([.]*)|
+([.]*\>)"

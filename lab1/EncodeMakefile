@@ -1,0 +1,15 @@
+# The following rule means: "if encode is older than encode.o or coding.o,
+# then link encode".
+encode: encode.o coding.o
+				g++ -o encode encode.o coding.o
+
+decode: decode.o coding.o
+				g++ -o decode decode.o coding.o
+
+# Rules to create the object files.
+encode.o: encode.cc coding.h
+				g++ -c encode.cc -std=c++11
+decode.o: decode.cc coding.h
+				g++ -c decode.cc -std=c++11
+coding.o: coding.cc coding.h
+				g++ -c coding.cc -std=c++11
